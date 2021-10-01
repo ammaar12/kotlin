@@ -1,0 +1,18 @@
+1. Rumus Parkir(1)
+fun main() {
+	hitungParkir(49)
+}
+ 
+fun hitungParkir(waktu: Int){
+    if (waktu >= 0 && waktu <=5){
+        print("tagihan parkir sebanyak $${waktu*1}")
+    }else if(waktu > 5 && waktu <= 24){
+        print("tagihan parkir sebanyak $${5 + ((waktu - 5)*0.5)}")
+    }else if(waktu % 24 == 0){
+        print("tagihan parkir sebanyak $${(waktu/24)*15}")
+    }else if(waktu > 24 ){
+        print("tagihan parkir sebanyak $${(waktu/24)*15 + ((waktu%24)*0.5)}")
+    }else{
+        print("jangan boong")
+    }
+}
