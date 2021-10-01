@@ -38,3 +38,26 @@ fun main() {
         }
     }
 }
+
+3. **Rumus Parkir(3)**
+fun main() {
+	var hours = 48
+    when(hours){
+        in 1..5 -> print("${(hours * 5).toDouble()}")
+        in 6..23 -> print("${5 + (hours - 5) * 0.5}")
+        else -> print("${((hours%24)*0.5) + (hours/24 * 15)}")
+    }
+}  
+
+inti dari keseluruhan adalah  
+ketika :  
+- 5 jam pertama = $1    
+- setiap jam = $0.5  
+- diatas 24 jam, biaya tetap $15    
+
+contoh input: 8 jam  
+maka output: $6.5  
+
+contoh input: 42 jam    
+maka output: $24.0
+
