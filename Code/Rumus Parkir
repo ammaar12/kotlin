@@ -1,4 +1,4 @@
-1. Rumus Parkir(1)
+1. **Rumus Parkir(1)**
 fun main() {
 	hitungParkir(49)
 }
@@ -14,5 +14,27 @@ fun hitungParkir(waktu: Int){
         print("tagihan parkir sebanyak $${(waktu/24)*15 + ((waktu%24)*0.5)}")
     }else{
         print("jangan boong")
+    }
+}
+
+2. **Rumus Parkir(2)**
+fun main() {
+	val jam = 45
+    var result = 0.0
+    var result2 = 0.0
+    var result3 = 0.0
+    when(jam){
+        in 1..5 -> {
+            result = jam * 1.0
+            print(result)
+        }
+        in 6..23 -> {
+            result2 = ((jam-5.0)*5) + 5
+            print(result2)
+        }
+        else -> {
+            result3 = (jam % 24)*0.5 + (jam / 24 * 15)
+            print(result3)
+        }
     }
 }
